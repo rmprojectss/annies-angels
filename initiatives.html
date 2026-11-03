@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,13 +12,11 @@
     a { text-decoration:none; color:inherit; }
     header { min-height:85px; padding:12px 5%; display:flex; justify-content:space-between; align-items:center; gap:20px; background:#fffaf4; border-bottom:1px solid #eadfd1; flex-wrap:wrap; }
     .brand { min-width:205px; }
-    .logo { font-family:'Allura',cursive; font-size:39px; color:#792b36; line-height:1; }
-    .heart { color:#8060a5; font-family:Georgia,serif; font-size:28px; }
-    .tagline { font-size:8px; letter-spacing:1.5px; text-transform:uppercase; color:#541d28; margin-top:5px; }
+    .logo img { width:250px; max-width:100%; height:auto; display:block; }
     nav { display:flex; align-items:center; gap:20px; flex-wrap:wrap; font-size:12px; }
     nav a:hover { color:#792b36; }
     .donate { background:#792b36; color:white; padding:10px 22px; border-radius:30px; }
-    .hero { background:linear-gradient(rgba(40,30,25,.48),rgba(40,30,25,.48)),url('https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=1600') center/cover; padding:95px 20px; text-align:center; color:white; }
+    .hero { background:linear-gradient(rgba(40,30,25,.48),rgba(40,30,25,.48)),url('images/hero-lantern.jpg') center/cover; padding:95px 20px; text-align:center; color:white; }
     .hero h1 { font-family:'Playfair Display',serif; font-size:50px; font-weight:500; }
     .hero p { font-size:15px; margin-top:10px; }
     main { max-width:1200px; margin:auto; padding:55px 30px 75px; }
@@ -36,7 +34,6 @@
     .learn { display:inline-block; color:#792b36; font-size:12px; font-weight:700; margin-top:13px; }
     .note { margin-top:35px; padding:25px; text-align:center; background:#f0e8dc; border-radius:12px; color:#625c54; font-size:13px; }
     footer { background:#3b302c; color:#fff8ee; padding:35px; text-align:center; }
-    footer .logo { color:#fff8ee; }
     footer p { color:#d9cbb9; font-size:12px; margin-top:8px; }
     @media(max-width:750px) {
       header { justify-content:center; }
@@ -44,15 +41,15 @@
       .cards { grid-template-columns:1fr; }
       .hero h1 { font-size:38px; }
       .card img { height:210px; }
+      .brand { display:flex; justify-content:center; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <a href="index.html" class="brand">
-    <div class="logo">Annie's Angels <span class="heart">♡</span></div>
-    <div class="tagline">A Christmas Legacy of Love and Giving</div>
+  <a href="index.html" class="brand logo">
+    <img src="images/annies-angels-logo.png" alt="Annie's Angels - A Christmas Legacy of Love and Giving">
   </a>
   <nav>
     <a href="index.html">Home</a>
@@ -79,7 +76,7 @@
   <div class="cards">
 
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=1000" alt="A welcoming Christmas community meal">
+      <img src="images/community-lunch.jpg" alt="A welcoming Christmas community meal">
       <div class="card-content">
         <h2>Christmas Community Lunch</h2>
         <p>A warm meal where everyone is welcome, regardless of their circumstances.</p>
@@ -93,7 +90,7 @@
     </article>
 
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=1000" alt="Care packages and essentials">
+      <img src="images/care-bags.jpg" alt="Care packages and essentials">
       <div class="card-content">
         <h2>Care Bags for All</h2>
         <p>Everyday essentials, thoughtfully gathered and given with love.</p>
@@ -107,7 +104,7 @@
     </article>
 
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=1000" alt="Wrapped Christmas gifts">
+      <img src="images/gift-drive.jpg" alt="Wrapped Christmas gifts">
       <div class="card-content">
         <h2>Toy & Gift Drive</h2>
         <p>Collecting new gifts to help make Christmas brighter for children and families.</p>
@@ -121,7 +118,7 @@
     </article>
 
     <article class="card">
-      <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=1000" alt="Children's books and toys">
+      <img src="images/hospital-gifts.jpg" alt="Children's books and comfort gifts">
       <div class="card-content">
         <h2>Children's Hospital Giving</h2>
         <p>Sharing comfort and happiness with children spending time in hospital.</p>
@@ -130,22 +127,3 @@
           <li>Small toys and approved comfort items.</li>
           <li>Exploring hospital-approved reading and play opportunities.</li>
         </ul>
-        <a class="learn" href="get-involved.html">Learn How to Help →</a>
-      </div>
-    </article>
-
-  </div>
-
-  <div class="note">
-    All hospital donations and activities will be coordinated in accordance with hospital guidelines and approval.
-  </div>
-</main>
-
-<footer>
-  <div class="logo">Annie's Angels <span class="heart">♡</span></div>
-  <p>A Christmas Legacy of Love and Giving</p>
-  <p>Created in loving memory of Annie Mah.</p>
-</footer>
-
-</body>
-</html>
