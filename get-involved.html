@@ -5,96 +5,176 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Get Involved | Annie's Angels</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&family=Allura&display=swap" rel="stylesheet">
+
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Georgia, serif; background: #faf7f0; color: #34332e; line-height: 1.7; }
-    header { padding: 22px 7%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-bottom: 1px solid #e8dfd2; }
-    .logo { font-size: 25px; color: #702d3c; font-weight: bold; }
-    .heart { color: #8060a5; }
-    nav { display: flex; gap: 20px; flex-wrap: wrap; }
-    nav a { color: #49443e; text-decoration: none; font-size: 14px; }
-    .hero { background: #702d3c; color: white; text-align: center; padding: 85px 20px; }
-    .hero h1 { font-size: 46px; margin-bottom: 12px; }
-    .hero p { letter-spacing: 2px; font-size: 13px; }
-    main { max-width: 1000px; margin: auto; padding: 65px 25px; }
-    .intro { text-align: center; max-width: 700px; margin: 0 auto 45px; }
-    .intro h2 { color: #702d3c; font-size: 30px; margin-bottom: 15px; }
-    .intro p { color: #625c54; }
-    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; }
-    .card { background: #f0ebe2; padding: 30px; border: 1px solid #e6ded1; }
-    .card h2 { color: #702d3c; font-size: 24px; margin-bottom: 15px; }
-    .card p { color: #625c54; font-size: 15px; }
-    .card a { color: #702d3c; font-weight: bold; }
-    .note { margin-top: 40px; padding: 25px; border-left: 3px solid #8060a5; background: #f5f0e8; }
-    .note h2 { color: #702d3c; margin-bottom: 10px; }
-    .note p { color: #625c54; }
-    footer { background: #342e2a; color: #f7f1e8; text-align: center; padding: 35px; }
-    footer p { color: #d5c9ba; font-size: 13px; margin-top: 8px; }
-    @media(max-width:600px) { header { justify-content: center; } nav { justify-content: center; gap: 12px; } .hero h1 { font-size: 36px; } }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'DM Sans',sans-serif; background:#faf5ed; color:#40352f; line-height:1.7; }
+    a { text-decoration:none; color:inherit; }
+    header { min-height:85px; padding:12px 5%; display:flex; justify-content:space-between; align-items:center; gap:20px; background:#fffaf4; border-bottom:1px solid #eadfd1; flex-wrap:wrap; }
+    .brand { min-width:205px; }
+    .logo { font-family:'Allura',cursive; font-size:39px; color:#792b36; line-height:1; }
+    .heart { color:#8060a5; font-family:Georgia,serif; font-size:28px; }
+    .tagline { font-size:8px; letter-spacing:1.5px; text-transform:uppercase; color:#541d28; margin-top:5px; }
+    nav { display:flex; align-items:center; gap:20px; flex-wrap:wrap; font-size:12px; }
+    nav a:hover { color:#792b36; }
+    .donate { background:#792b36; color:white; padding:10px 22px; border-radius:30px; }
+    .hero { background:linear-gradient(rgba(40,30,25,.52),rgba(40,30,25,.52)),url('https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=1600') center/cover; padding:85px 20px; text-align:center; color:white; }
+    .hero h1 { font-family:'Playfair Display',serif; font-size:48px; font-weight:500; }
+    .hero p { font-size:15px; margin-top:10px; }
+    main { max-width:1150px; margin:auto; padding:60px 30px 75px; }
+    .intro { max-width:720px; text-align:center; margin:0 auto 40px; }
+    .intro h2 { font-family:'Playfair Display',serif; color:#792b36; font-size:32px; font-weight:500; margin-bottom:12px; }
+    .intro p { color:#6b6058; font-size:14px; }
+    .cards { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .card { background:#fffaf4; border:1px solid #eadfd1; border-radius:12px; padding:28px 24px; box-shadow:0 3px 15px rgba(65,40,25,.06); display:flex; flex-direction:column; }
+    .symbol { font-size:37px; color:#792b36; margin-bottom:16px; }
+    .card h2 { font-family:'Playfair Display',serif; color:#792b36; font-size:24px; font-weight:500; margin-bottom:12px; }
+    .card p { color:#625c54; font-size:13px; margin-bottom:16px; }
+    .card ul { padding-left:18px; color:#625c54; font-size:13px; margin-bottom:22px; }
+    .card li { margin-bottom:7px; }
+    .card a { margin-top:auto; display:block; background:#792b36; color:white; text-align:center; padding:11px; border-radius:7px; font-size:12px; }
+    .items { background:#f0e8dc; padding:35px; border-radius:12px; margin-top:35px; }
+    .items h2 { font-family:'Playfair Display',serif; color:#792b36; font-size:27px; margin-bottom:10px; font-weight:500; }
+    .items p { color:#625c54; font-size:14px; }
+    .items-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:20px; margin-top:20px; }
+    .items-grid ul { padding-left:20px; color:#625c54; font-size:13px; }
+    .volunteer { margin-top:35px; padding:40px 25px; background:#fffaf4; border:1px solid #eadfd1; border-radius:12px; text-align:center; }
+    .volunteer h2 { font-family:'Playfair Display',serif; color:#792b36; font-size:29px; font-weight:500; margin-bottom:10px; }
+    .volunteer p { color:#625c54; font-size:14px; max-width:650px; margin:0 auto 20px; }
+    .volunteer a { display:inline-block; background:#792b36; color:white; padding:11px 25px; border-radius:25px; font-size:12px; }
+    .disclaimer { margin-top:25px; color:#776c62; font-size:11px; text-align:center; }
+    footer { background:#3b302c; color:#fff8ee; padding:35px; text-align:center; }
+    footer .logo { color:#fff8ee; }
+    footer p { color:#d9cbb9; font-size:12px; margin-top:8px; }
+    @media(max-width:850px) {
+      header { justify-content:center; }
+      nav { justify-content:center; gap:13px; }
+      .cards { grid-template-columns:1fr; }
+    }
+    @media(max-width:550px) {
+      .items-grid { grid-template-columns:1fr; }
+      .hero h1 { font-size:37px; }
+      main { padding:45px 18px; }
+    }
   </style>
 </head>
-<body>
-  <header>
-    <div class="logo">Annie's Angels <span class="heart">♥</span></div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="story.html">Our Story</a>
-      <a href="initiatives.html">Our Initiatives</a>
-      <a href="get-involved.html">Get Involved</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <div class="hero">
-    <h1>Get Involved</h1>
-    <p>EVERY ACT OF KINDNESS MAKES A DIFFERENCE</p>
+<body>
+
+<header>
+  <a href="index.html" class="brand">
+    <div class="logo">Annie's Angels <span class="heart">♡</span></div>
+    <div class="tagline">A Christmas Legacy of Love and Giving</div>
+  </a>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="story.html">Our Story</a>
+    <a href="initiatives.html">Our Initiatives</a>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="get-involved.html" class="donate">Donate</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Get Involved</h1>
+  <p>There are many ways to make a difference.</p>
+</section>
+
+<main>
+
+  <div class="intro">
+    <h2>Be Part of Annie's Legacy</h2>
+    <p>
+      Whether through a donation, an item contribution or your time,
+      every act of kindness helps keep Annie's legacy alive.
+      Together, we can make a meaningful difference.
+    </p>
   </div>
 
-  <main>
-    <div class="intro">
-      <h2>Be Part of Annie's Legacy</h2>
-      <p>Whether you give your time, contribute an item or make a donation, your support helps us continue Annie's tradition of generosity and care.</p>
+  <div class="cards">
+
+    <article class="card">
+      <div class="symbol">♡</div>
+      <h2>Christmas Outreach</h2>
+      <p>Help us continue Annie's Christmas tradition and support individuals and families in Calgary.</p>
+      <ul>
+        <li>Community Christmas lunch</li>
+        <li>Care bags and essentials</li>
+        <li>Toy and gift drive</li>
+      </ul>
+      <a href="contact.html">Ask About Donating</a>
+    </article>
+
+    <article class="card">
+      <div class="symbol">✧</div>
+      <h2>Cancer Support</h2>
+      <p>Honouring Annie's journey with pancreatic cancer by supporting those affected by cancer.</p>
+      <ul>
+        <li>Support for patients and families</li>
+        <li>Cancer-related charitable initiatives</li>
+        <li>Meaningful community support</li>
+      </ul>
+      <a href="contact.html">Explore Cancer Support</a>
+    </article>
+
+    <article class="card">
+      <div class="symbol">♡</div>
+      <h2>Support Both</h2>
+      <p>Interested in supporting both causes? Let us know and we can discuss the available donation arrangements.</p>
+      <ul>
+        <li>Christmas community outreach</li>
+        <li>Cancer support initiatives</li>
+        <li>A shared commitment to giving</li>
+      </ul>
+      <a href="contact.html">Ask About Supporting Both</a>
+    </article>
+
+  </div>
+
+  <section class="items">
+    <h2>Donate Items</h2>
+    <p>New, unused items can help bring comfort, joy and practical support to people in our community.</p>
+
+    <div class="items-grid">
+      <ul>
+        <li>New toys, books and games</li>
+        <li>Colouring books and art supplies</li>
+        <li>Toiletries and personal-care products</li>
+      </ul>
+      <ul>
+        <li>Warm socks, gloves and toques</li>
+        <li>Winter accessories</li>
+        <li>Approved children's hospital gifts</li>
+      </ul>
     </div>
+  </section>
 
-    <div class="cards">
-      <div class="card">
-        <h2>Make a Donation</h2>
-        <p>Financial contributions help support our Christmas community lunch, care bags, toy drive and hospital giving initiatives.</p>
-        <p>Interested in contributing? Please reach out to us to learn about current donation arrangements and how funds will be used.</p>
-        <a href="contact.html">Contact us about donating →</a>
-      </div>
+  <section class="volunteer">
+    <h2>Give Your Time</h2>
+    <p>
+      From preparing meals and assembling care bags to wrapping gifts
+      and helping at community events, volunteers are an important
+      part of Annie's Angels.
+    </p>
+    <a href="contact.html">Become a Volunteer →</a>
+  </section>
 
-      <div class="card">
-        <h2>Donate Items</h2>
-        <p>Help us collect new gifts and useful essentials for children, families and individuals in our community.</p>
-        <p>Items may include:</p>
-        <ul>
-          <li>New toys, books and games</li>
-          <li>Art and craft supplies</li>
-          <li>Toiletries and personal-care items</li>
-          <li>Warm socks, gloves and winter accessories</li>
-        </ul>
-        <a href="contact.html">Ask about item donations →</a>
-      </div>
+  <p class="disclaimer">
+    Donation arrangements, charitable receipt eligibility and the allocation of funds
+    will be clearly communicated before contributions are accepted.
+    Hospital donations and activities are subject to hospital approval.
+  </p>
 
-      <div class="card">
-        <h2>Volunteer With Us</h2>
-        <p>It takes a community to make these initiatives possible. Volunteers help prepare meals, organize donations, assemble care bags and support Christmas events.</p>
-        <p>We would love to hear from people who want to share their time and kindness.</p>
-        <a href="contact.html">Get in touch →</a>
-      </div>
-    </div>
+</main>
 
-    <div class="note">
-      <h2>Every Contribution Matters</h2>
-      <p>Our goal is to create meaningful moments of connection and generosity. We are grateful for every person, business and organization that helps bring Annie's legacy to life.</p>
-    </div>
-  </main>
+<footer>
+  <div class="logo">Annie's Angels <span class="heart">♡</span></div>
+  <p>A Christmas Legacy of Love and Giving</p>
+  <p>Created in loving memory of Annie Mah.</p>
+</footer>
 
-  <footer>
-    <div class="logo" style="color:#f7f1e8;">Annie's Angels <span class="heart">♥</span></div>
-    <p>A Christmas Legacy of Love and Giving</p>
-  </footer>
 </body>
 </html>
