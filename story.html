@@ -1,4 +1,4 @@
-
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,13 +12,12 @@
     a { text-decoration:none; color:inherit; }
     header { min-height:85px; padding:12px 5%; display:flex; justify-content:space-between; align-items:center; gap:20px; background:#fffaf4; border-bottom:1px solid #eadfd1; flex-wrap:wrap; }
     .brand { min-width:205px; }
-    .logo { font-family:'Allura',cursive; font-size:39px; color:#792b36; line-height:1; }
+    .logo img { width:250px; max-width:100%; height:auto; display:block; }
     .heart { color:#8060a5; font-family:Georgia,serif; font-size:28px; }
-    .tagline { font-size:8px; letter-spacing:1.5px; text-transform:uppercase; color:#541d28; margin-top:5px; }
     nav { display:flex; align-items:center; gap:20px; flex-wrap:wrap; font-size:12px; }
     nav a:hover { color:#792b36; }
     .donate { background:#792b36; color:white; padding:10px 22px; border-radius:30px; }
-    .hero { background:linear-gradient(rgba(84,29,40,.65),rgba(84,29,40,.65)),url('https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=1600') center/cover; padding:90px 20px; text-align:center; color:white; }
+    .hero { background:linear-gradient(rgba(84,29,40,.55),rgba(84,29,40,.55)),url('images/hero-lantern.jpg') center/cover; padding:90px 20px; text-align:center; color:white; }
     .hero h1 { font-family:'Playfair Display',serif; font-size:clamp(42px,6vw,58px); font-weight:500; }
     .hero p { letter-spacing:3px; font-size:11px; margin-top:12px; }
     main { max-width:1050px; margin:auto; padding:65px 30px; }
@@ -31,22 +30,22 @@
     .quote { margin-top:35px; padding:22px; border-left:3px solid #8060a5; background:#f0e8dc; font-family:'Playfair Display',serif; font-style:italic; color:#792b36; font-size:21px; }
     .closing { text-align:center; padding:45px 20px 10px; color:#625c54; }
     footer { background:#3b302c; color:#fff8ee; padding:35px; text-align:center; }
-    footer .logo { color:#fff8ee; }
+    footer .logo { font-family:'Allura',cursive; font-size:39px; color:#fff8ee; }
     footer p { color:#d9cbb9; font-size:12px; margin-top:8px; }
     @media(max-width:750px) {
       header { justify-content:center; }
       nav { justify-content:center; }
       .story-grid { grid-template-columns:1fr; }
       .images img { height:220px; }
+      .brand { display:flex; justify-content:center; }
     }
   </style>
 </head>
 <body>
 
 <header>
-  <a href="index.html" class="brand">
-    <div class="logo">Annie's Angels <span class="heart">♡</span></div>
-    <div class="tagline">A Christmas Legacy of Love and Giving</div>
+  <a href="index.html" class="brand logo">
+    <img src="images/annies-angels-logo.png" alt="Annie's Angels - A Christmas Legacy of Love and Giving">
   </a>
   <nav>
     <a href="index.html">Home</a>
@@ -67,41 +66,12 @@
 <main>
   <div class="story-grid">
     <div class="images">
-      <img src="https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=900" alt="Warm Christmas candlelight and evergreen branches">
-      <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=900" alt="A shared community meal">
+      <img src="images/hero-lantern.jpg" alt="Warm Christmas candlelight and evergreen branches">
+      <img src="images/community-lunch.jpg" alt="A shared community Christmas meal">
     </div>
 
     <div class="story-text">
       <div class="eyebrow">Our Story</div>
       <h2>A Life of Love, Faith and Giving.</h2>
 
-      <p>Annie Mah was a woman whose kindness, generosity and faith touched everyone around her. She believed in caring for others, especially those in her community who needed a little extra support.</p>
-
-      <p>Each Christmas, Annie continued a special tradition in honour of her late husband, Constable Henry. She opened the doors of a local church and welcomed people to share a warm meal, prepared care bags and gifts, and brought joy to families in need.</p>
-
-      <p>With the help of volunteers, she made sure people had more than a meal. She wanted everyone to feel welcomed, remembered and cared for.</p>
-
-      <p>After Annie's passing from pancreatic cancer, the desire to carry forward her legacy became the inspiration behind Annie's Angels.</p>
-
-      <p>Through community meals, care packages, toy and gift drives, and support for children in hospital, we hope to continue sharing the compassion Annie demonstrated throughout her life.</p>
-
-      <div class="quote">
-        A legacy of kindness does not end with one person. It lives on through every person who chooses to give.
-      </div>
-    </div>
-  </div>
-
-  <div class="closing">
-    <h2>Her Legacy Lives On</h2>
-    <p>Created with love, in memory of Annie Mah.</p>
-  </div>
-</main>
-
-<footer>
-  <div class="logo">Annie's Angels <span class="heart">♡</span></div>
-  <p>A Christmas Legacy of Love and Giving</p>
-  <p>Created in loving memory of Annie Mah.</p>
-</footer>
-
-</body>
-</html>
+      <p>Annie Mah was a woman whose kindness, generosity and faith touched everyone
