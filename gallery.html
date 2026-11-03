@@ -9,56 +9,107 @@
 
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'DM Sans',sans-serif; background:#faf5ed; color:#40352f; line-height:1.7; }
+
+    body {
+      font-family:'DM Sans',sans-serif;
+      background:#faf5ed;
+      color:#40352f;
+      line-height:1.7;
+    }
+
     a { text-decoration:none; color:inherit; }
 
-    header { min-height:85px; padding:12px 5%; display:flex; justify-content:space-between; align-items:center; gap:20px; background:#fffaf4; border-bottom:1px solid #eadfd1; flex-wrap:wrap; }
+    header {
+      min-height:85px;
+      padding:12px 5%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      background:#fffaf4;
+      border-bottom:1px solid #eadfd1;
+      flex-wrap:wrap;
+    }
+
     .brand { min-width:205px; }
-    .logo { font-family:'Allura',cursive; font-size:39px; color:#792b36; line-height:1; }
-    .heart { color:#8060a5; font-family:Georgia,serif; font-size:28px; }
-    .tagline { font-size:8px; letter-spacing:1.5px; text-transform:uppercase; color:#541d28; margin-top:5px; }
-    nav { display:flex; align-items:center; gap:20px; flex-wrap:wrap; font-size:12px; }
+
+    .header-logo {
+      width:250px;
+      max-width:100%;
+      height:auto;
+      display:block;
+    }
+
+    nav {
+      display:flex;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
+      font-size:12px;
+    }
+
     nav a:hover { color:#792b36; }
-    .donate { background:#792b36; color:white; padding:10px 22px; border-radius:30px; }
+
+    .donate {
+      background:#792b36;
+      color:white;
+      padding:10px 22px;
+      border-radius:30px;
+    }
 
     .hero {
-      background:linear-gradient(rgba(40,30,25,.52),rgba(40,30,25,.52)),
-      url('https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=1600') center/cover;
+      background:
+        linear-gradient(rgba(40,30,25,.52),rgba(40,30,25,.52)),
+        url('images/hero-lantern.jpg') center/cover;
       padding:85px 20px;
       text-align:center;
       color:white;
     }
-    .hero h1 { font-family:'Playfair Display',serif; font-size:48px; font-weight:500; }
-    .hero p { margin-top:10px; font-size:14px; }
 
-    main { max-width:1200px; margin:auto; padding:60px 30px 75px; }
-
-    .intro { text-align:center; max-width:720px; margin:0 auto 35px; }
-    .intro h2 { font-family:'Playfair Display',serif; color:#792b36; font-size:32px; font-weight:500; margin-bottom:12px; }
-    .intro p { color:#6b6058; font-size:14px; }
-
-    .filters { display:flex; justify-content:center; flex-wrap:wrap; gap:10px; margin-bottom:35px; }
-    .filters button {
-      border:1px solid #d9c9b9;
-      background:#fffaf4;
-      color:#792b36;
-      padding:9px 17px;
-      border-radius:25px;
-      font-family:inherit;
-      font-size:12px;
-      cursor:pointer;
+    .hero h1 {
+      font-family:'Playfair Display',serif;
+      font-size:48px;
+      font-weight:500;
     }
-    .filters button.active,
-    .filters button:hover {
-      background:#792b36;
-      color:white;
-      border-color:#792b36;
+
+    .hero p {
+      margin-top:10px;
+      font-size:14px;
+    }
+
+    main {
+      max-width:1100px;
+      margin:auto;
+      padding:65px 30px 75px;
+    }
+
+    .intro {
+      text-align:center;
+      max-width:720px;
+      margin:0 auto 45px;
+    }
+
+    .intro h2 {
+      font-family:'Playfair Display',serif;
+      color:#792b36;
+      font-size:32px;
+      font-weight:500;
+      margin-bottom:14px;
+    }
+
+    .intro p {
+      color:#6b6058;
+      font-size:14px;
+    }
+
+    .purple-heart {
+      color:#8060a5;
     }
 
     .gallery {
       display:grid;
       grid-template-columns:repeat(3,1fr);
-      gap:20px;
+      gap:22px;
     }
 
     .photo-card {
@@ -70,43 +121,84 @@
 
     .photo-card img {
       width:100%;
-      height:235px;
+      height:220px;
       object-fit:cover;
       display:block;
     }
 
-    .caption { padding:16px 18px 19px; }
+    .caption {
+      padding:17px 18px 20px;
+    }
+
     .caption h3 {
       font-family:'Playfair Display',serif;
       font-size:19px;
       color:#792b36;
       font-weight:500;
     }
-    .caption p { color:#766b61; font-size:12px; margin-top:4px; }
+
+    .caption p {
+      color:#766b61;
+      font-size:12px;
+      margin-top:5px;
+    }
 
     .gallery-note {
-      margin-top:40px;
-      padding:25px;
+      margin-top:45px;
+      padding:35px 25px;
       text-align:center;
       background:#f0e8dc;
       border-radius:12px;
-      color:#625c54;
-      font-size:13px;
     }
 
-    footer { background:#3b302c; color:#fff8ee; padding:35px; text-align:center; }
-    footer .logo { color:#fff8ee; }
-    footer p { color:#d9cbb9; font-size:12px; margin-top:8px; }
+    .gallery-note h2 {
+      font-family:'Playfair Display',serif;
+      color:#792b36;
+      font-size:25px;
+      font-weight:500;
+      margin-bottom:10px;
+    }
+
+    .gallery-note p {
+      color:#625c54;
+      font-size:13px;
+      max-width:650px;
+      margin:auto;
+    }
+
+    footer {
+      background:#3b302c;
+      color:#fff8ee;
+      padding:35px;
+      text-align:center;
+    }
+
+    footer .logo {
+      font-family:'Allura',cursive;
+      font-size:34px;
+    }
+
+    footer .heart {
+      color:#a58ac5;
+    }
+
+    footer p {
+      color:#d9cbb9;
+      font-size:12px;
+      margin-top:8px;
+    }
 
     @media(max-width:850px) {
       header { justify-content:center; }
       nav { justify-content:center; gap:13px; }
       .gallery { grid-template-columns:repeat(2,1fr); }
     }
+
     @media(max-width:550px) {
       .gallery { grid-template-columns:1fr; }
       .hero h1 { font-size:38px; }
       main { padding:45px 18px; }
+      .header-logo { width:220px; }
     }
   </style>
 </head>
@@ -115,9 +207,9 @@
 
 <header>
   <a href="index.html" class="brand">
-    <div class="logo">Annie's Angels <span class="heart">♡</span></div>
-    <div class="tagline">A Christmas Legacy of Love and Giving</div>
+    <img class="header-logo" src="images/annies-angels-logo.png" alt="Annie's Angels">
   </a>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="story.html">Our Story</a>
@@ -131,84 +223,56 @@
 
 <section class="hero">
   <h1>Our Gallery</h1>
-  <p>Moments of kindness, connection and giving.</p>
+  <p>A journey of kindness, connection and giving.</p>
 </section>
 
 <main>
 
   <div class="intro">
-    <h2>Our Journey of Giving</h2>
+    <h2>The Beginning of Our Journey</h2>
     <p>
-      Every meal shared, gift wrapped and helping hand tells a story.
-      This is where we will share the memories and moments that
-      bring Annie's Angels to life.
+      Annie's Angels is just beginning, but its purpose is rooted in a
+      legacy of love and generosity. As we bring this vision to life,
+      we look forward to sharing the moments, memories and people
+      who make it all possible.
     </p>
-  </div>
-
-  <div class="filters">
-    <button class="active" data-filter="all">All Moments</button>
-    <button data-filter="lunch">Community Lunch</button>
-    <button data-filter="care">Care Bags</button>
-    <button data-filter="gifts">Toy & Gift Drive</button>
-    <button data-filter="hospital">Hospital Giving</button>
-    <button data-filter="volunteers">Volunteers</button>
   </div>
 
   <div class="gallery">
 
-    <article class="photo-card" data-category="lunch">
-      <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=900" alt="Community Christmas meal">
+    <article class="photo-card">
+      <img src="images/community-lunch.jpg" alt="Community meal inspiration">
       <div class="caption">
         <h3>A Place at the Table</h3>
-        <p>Christmas Community Lunch</p>
+        <p>Our vision for the Christmas Community Lunch</p>
       </div>
     </article>
 
-    <article class="photo-card" data-category="care">
-      <img src="https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=900" alt="Care packages">
+    <article class="photo-card">
+      <img src="images/care-bags.jpg" alt="Care package inspiration">
       <div class="caption">
         <h3>Care Packages</h3>
-        <p>Essentials shared with love</p>
+        <p>Sharing everyday essentials with love</p>
       </div>
     </article>
 
-    <article class="photo-card" data-category="gifts">
-      <img src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=900" alt="Wrapped Christmas presents">
+    <article class="photo-card">
+      <img src="images/gift-drive.jpg" alt="Gift drive inspiration">
       <div class="caption">
         <h3>Wrapped with Love</h3>
-        <p>Toy & Gift Drive</p>
-      </div>
-    </article>
-
-    <article class="photo-card" data-category="hospital">
-      <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=900" alt="Children's books and toys">
-      <div class="caption">
-        <h3>A Little Comfort</h3>
-        <p>Children's Hospital Giving</p>
-      </div>
-    </article>
-
-    <article class="photo-card" data-category="volunteers">
-      <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=900" alt="Community volunteers helping together">
-      <div class="caption">
-        <h3>Giving Together</h3>
-        <p>Our Volunteers</p>
-      </div>
-    </article>
-
-    <article class="photo-card" data-category="gifts">
-      <img src="https://images.unsplash.com/photo-1513883049090-d0b7439799bf?w=900" alt="Christmas gifts">
-      <div class="caption">
-        <h3>Sharing Christmas Joy</h3>
-        <p>Community Gift Drive</p>
+        <p>Bringing joy through toys and gifts</p>
       </div>
     </article>
 
   </div>
 
   <div class="gallery-note">
-    Our gallery will grow with every act of kindness.
-    We look forward to sharing the memories created together.
+    <h2>More Memories to Come <span class="purple-heart">♡</span></h2>
+    <p>
+      This gallery will grow as Annie's Angels grows. We look forward
+      to celebrating the kindness of our volunteers, donors and
+      community, one memory at a time.
+    </p>
   </div>
 
 </main>
@@ -218,26 +282,6 @@
   <p>A Christmas Legacy of Love and Giving</p>
   <p>Created in loving memory of Annie Mah.</p>
 </footer>
-
-<script>
-  const filterButtons = document.querySelectorAll('.filters button');
-  const photoCards = document.querySelectorAll('.photo-card');
-
-  filterButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      filterButtons.forEach(item => item.classList.remove('active'));
-      button.classList.add('active');
-
-      const filter = button.dataset.filter;
-
-      photoCards.forEach(card => {
-        card.style.display =
-          filter === 'all' || card.dataset.category === filter
-          ? 'block' : 'none';
-      });
-    });
-  });
-</script>
 
 </body>
 </html>
