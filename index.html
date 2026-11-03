@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Annie's Angels — A Christmas Legacy of Love and Giving.">
+  <title>Annie's Angels | A Christmas Legacy of Love</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, serif;
+      background: #faf7f0;
+      color: #34332e;
+      line-height: 1.7;
+    }
+    header {
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #e8dfd2;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .logo { font-size: 25px; color: #702d3c; font-weight: bold; }
+    .heart { color: #8060a5; }
+    nav { display: flex; gap: 20px; flex-wrap: wrap; }
+    nav a {
+      color: #49443e;
+      text-decoration: none;
+      font-size: 14px;
+    }
+    nav a:hover { color: #8060a5; }
+    .hero {
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 20px;
+      background:
+        linear-gradient(rgba(35,30,25,.48), rgba(35,30,25,.48)),
+        url("https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=1800") center/cover;
+      color: white;
+    }
+    .hero-content { max-width: 720px; }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+    h1 { font-size: clamp(42px, 7vw, 68px); line-height: 1.12; }
+    .hero p { font-size: 19px; margin: 22px 0 30px; }
+    .button {
+      display: inline-block;
+      background: #702d3c;
+      color: white;
+      padding: 13px 27px;
+      text-decoration: none;
+      letter-spacing: 1px;
+      font-size: 13px;
+    }
+    section { padding: 75px 8%; }
+    .intro { max-width: 760px; margin: auto; text-align: center; }
+    .intro h2, .section-heading {
+      color: #702d3c;
+      font-size: 34px;
+      margin-bottom: 18px;
+    }
+    .intro p { color: #666057; font-size: 17px; }
+    .pillars { background: #f0ebe2; }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin-top: 35px;
+    }
+    .card {
+      background: #faf7f0;
+      padding: 30px;
+      border: 1px solid #e6ded1;
+    }
+    .card h3 { color: #702d3c; margin-bottom: 12px; }
+    .card p { color: #69645b; font-size: 15px; }
+    .story {
+      max-width: 760px;
+      margin: auto;
+      text-align: center;
+    }
+    .story p { margin: 15px 0; color: #625c54; }
+    footer {
+      background: #342e2a;
+      color: #f7f1e8;
+      padding: 35px 8%;
+      text-align: center;
+    }
+    footer p { font-size: 13px; margin-top: 8px; color: #d5c9ba; }
+    @media (max-width: 600px) {
+      header { justify-content: center; }
+      nav { justify-content: center; gap: 13px; }
+      section { padding: 55px 7%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Annie's Angels <span class="heart">♥</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="story.html">Our Story</a>
+      <a href="initiatives.html">Our Initiatives</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">Honouring Annie Mah</div>
+        <h1>A Christmas Legacy of Love and Giving</h1>
+        <p>Continuing a tradition of kindness, compassion and community — one act of giving at a time.</p>
+        <a class="button" href="initiatives.html">Discover Our Initiatives</a>
+      </div>
+    </div>
+
+    <section>
+      <div class="intro">
+        <h2>Giving, in Her Memory</h2>
+        <p>Annie's Angels was created in loving memory of Annie Mah and the kindness she shared with her community. Inspired by her tradition of opening her doors to those in need at Christmas, we hope to continue her legacy by bringing people together through food, gifts and meaningful acts of kindness.</p>
+      </div>
+    </section>
+
+    <section class="pillars">
+      <div class="intro">
+        <h2>How We Give</h2>
+        <p>Three ways to carry kindness forward.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h3>Christmas Community Lunch</h3>
+          <p>A welcoming meal where everyone is invited to share food, connection and the joy of Christmas.</p>
+        </div>
+        <div class="card">
+          <h3>Toy & Gift Drive</h3>
+          <p>Collecting new toys, books and gifts to help make the holidays brighter for children and families.</p>
+        </div>
+        <div class="card">
+          <h3>Children's Hospital Giving</h3>
+          <p>Sharing comfort and joy with children in hospital through thoughtful gifts, books and approved volunteer activities.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="story">
+        <h2 class="section-heading">A Legacy That Lives On</h2>
+        <p>To us, giving is about more than gifts. It is about making people feel remembered, welcomed and cared for.</p>
+        <p>Through Annie's Angels, we hope to keep that spirit alive throughout the year, with a special focus on the Christmas season.</p>
+        <a class="button" href="story.html">Read Annie's Story</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="logo" style="color:#f7f1e8;">Annie's Angels <span class="heart">♥</span></div>
+    <p>A Christmas Legacy of Love and Giving</p>
+    <p>Created in loving memory of Annie Mah.</p>
+  </footer>
+</body>
+</html>
