@@ -6,107 +6,391 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Annie's Angels — A Christmas Legacy of Love and Giving.">
   <title>Annie's Angels | A Christmas Legacy of Love</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&family=Allura&display=swap" rel="stylesheet">
+
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: Georgia, serif;
-      background: #faf7f0;
-      color: #34332e;
-      line-height: 1.7;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    :root {
+      --cream: #faf5ed;
+      --burgundy: #792b36;
+      --dark-burgundy: #541d28;
+      --purple: #8060a5;
+      --gold: #b99a68;
+      --green: #314b38;
+      --text: #40352f;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HEADER */
+
     header {
-      padding: 22px 7%;
+      min-height: 85px;
+      padding: 12px 5%;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      border-bottom: 1px solid #e8dfd2;
-      flex-wrap: wrap;
-      gap: 12px;
+      gap: 20px;
+      background: #fffaf4;
+      border-bottom: 1px solid #eadfd1;
+      position: sticky;
+      top: 0;
+      z-index: 10;
     }
-    .logo { font-size: 25px; color: #702d3c; font-weight: bold; }
-    .heart { color: #8060a5; }
-    nav { display: flex; gap: 20px; flex-wrap: wrap; }
-    nav a {
-      color: #49443e;
-      text-decoration: none;
-      font-size: 14px;
+
+    .brand {
+      min-width: 205px;
     }
-    nav a:hover { color: #8060a5; }
-    .hero {
-      min-height: 520px;
+
+    .logo {
+      font-family: 'Allura', cursive;
+      font-size: 39px;
+      color: var(--burgundy);
+      line-height: 1;
+      white-space: nowrap;
+    }
+
+    .logo-heart {
+      color: var(--purple);
+      font-family: Georgia, serif;
+      font-size: 28px;
+    }
+
+    .tagline {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 8px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--dark-burgundy);
+      margin-top: 5px;
+    }
+
+    nav {
       display: flex;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 20px;
-      background:
-        linear-gradient(rgba(35,30,25,.48), rgba(35,30,25,.48)),
-        url("https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=1800") center/cover;
-      color: white;
-    }
-    .hero-content { max-width: 720px; }
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 4px;
+      gap: 22px;
       font-size: 12px;
-      margin-bottom: 20px;
     }
-    h1 { font-size: clamp(42px, 7vw, 68px); line-height: 1.12; }
-    .hero p { font-size: 19px; margin: 22px 0 30px; }
-    .button {
-      display: inline-block;
-      background: #702d3c;
+
+    nav a {
+      transition: color .2s;
+    }
+
+    nav a:hover {
+      color: var(--burgundy);
+    }
+
+    .donate-btn {
+      background: var(--burgundy);
       color: white;
-      padding: 13px 27px;
-      text-decoration: none;
-      letter-spacing: 1px;
+      padding: 10px 22px;
+      border-radius: 30px;
+      font-size: 12px;
+      transition: background .2s;
+    }
+
+    .donate-btn:hover {
+      background: var(--dark-burgundy);
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 440px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      background:
+        linear-gradient(90deg,
+          rgba(250,245,237,.98) 0%,
+          rgba(250,245,237,.91) 42%,
+          rgba(250,245,237,.05) 100%),
+        url('https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=1800')
+        center/cover;
+      padding: 65px 8%;
+    }
+
+    .hero-content {
+      max-width: 490px;
+    }
+
+    .eyebrow {
+      color: var(--burgundy);
+      letter-spacing: 3px;
+      font-size: 11px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      color: var(--dark-burgundy);
+      font-size: clamp(42px, 5vw, 66px);
+      line-height: 1.12;
+      font-weight: 500;
+    }
+
+    .hero-line {
+      width: 55px;
+      height: 2px;
+      background: var(--burgundy);
+      margin: 22px 0;
+    }
+
+    .hero p {
+      max-width: 380px;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 25px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px;
+    }
+
+    .primary-btn,
+    .secondary-btn {
+      display: inline-block;
+      padding: 11px 24px;
+      border-radius: 30px;
       font-size: 13px;
     }
-    section { padding: 75px 8%; }
-    .intro { max-width: 760px; margin: auto; text-align: center; }
-    .intro h2, .section-heading {
-      color: #702d3c;
-      font-size: 34px;
-      margin-bottom: 18px;
+
+    .primary-btn {
+      background: var(--burgundy);
+      color: white;
     }
-    .intro p { color: #666057; font-size: 17px; }
-    .pillars { background: #f0ebe2; }
+
+    .secondary-btn {
+      border: 1px solid var(--burgundy);
+      color: var(--burgundy);
+      background: rgba(255,255,255,.55);
+    }
+
+    /* INTRODUCTION */
+
+    .welcome {
+      max-width: 850px;
+      text-align: center;
+      margin: auto;
+      padding: 65px 25px 55px;
+    }
+
+    .welcome h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--dark-burgundy);
+      font-size: 35px;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+
+    .welcome p {
+      color: #6b6058;
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+    /* INITIATIVES */
+
+    .initiatives {
+      background: #f0e8dc;
+      padding: 65px 6%;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--dark-burgundy);
+      font-size: 36px;
+      font-weight: 500;
+    }
+
+    .section-heading p {
+      color: #71665c;
+      margin-top: 7px;
+      font-size: 14px;
+    }
+
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      margin-top: 35px;
-    }
-    .card {
-      background: #faf7f0;
-      padding: 30px;
-      border: 1px solid #e6ded1;
-    }
-    .card h3 { color: #702d3c; margin-bottom: 12px; }
-    .card p { color: #69645b; font-size: 15px; }
-    .story {
-      max-width: 760px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 17px;
+      max-width: 1250px;
       margin: auto;
-      text-align: center;
     }
-    .story p { margin: 15px 0; color: #625c54; }
+
+    .card {
+      background: #fffaf4;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 3px 15px rgba(65,40,25,.07);
+      transition: transform .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 17px;
+    }
+
+    .card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      color: var(--dark-burgundy);
+      margin-bottom: 7px;
+    }
+
+    .card p {
+      font-size: 12px;
+      color: #6b6058;
+      line-height: 1.6;
+      min-height: 58px;
+    }
+
+    .learn-more {
+      display: inline-block;
+      margin-top: 10px;
+      color: var(--burgundy);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    /* OUR STORY */
+
+    .story-section {
+      padding: 75px 8%;
+      text-align: center;
+      background: #fffaf4;
+    }
+
+    .story-section h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--dark-burgundy);
+      font-size: 36px;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .story-section p {
+      max-width: 680px;
+      margin: 0 auto 25px;
+      color: #6b6058;
+      font-size: 15px;
+    }
+
+    /* FOOTER */
+
     footer {
-      background: #342e2a;
-      color: #f7f1e8;
-      padding: 35px 8%;
+      background: #3b302c;
+      color: #fff8ee;
+      padding: 40px 7%;
       text-align: center;
     }
-    footer p { font-size: 13px; margin-top: 8px; color: #d5c9ba; }
+
+    footer .logo {
+      color: #fff8ee;
+    }
+
+    footer p {
+      color: #d9cbb9;
+      font-size: 12px;
+      margin-top: 8px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+      font-size: 12px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 950px) {
+      header {
+        flex-direction: column;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 13px;
+      }
+
+      .cards {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     @media (max-width: 600px) {
-      header { justify-content: center; }
-      nav { justify-content: center; gap: 13px; }
-      section { padding: 55px 7%; }
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: 430px;
+        padding: 55px 7%;
+        background:
+          linear-gradient(rgba(250,245,237,.88), rgba(250,245,237,.88)),
+          url('https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=1000')
+          center/cover;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .card img {
+        height: 210px;
+      }
+
+      .logo {
+        font-size: 35px;
+      }
     }
   </style>
 </head>
+
 <body>
+
   <header>
-    <div class="logo">Annie's Angels <span class="heart">♥</span></div>
+    <a href="index.html" class="brand">
+      <div class="logo">Annie's Angels <span class="logo-heart">♡</span></div>
+      <div class="tagline">A Christmas Legacy of Love and Giving</div>
+    </a>
+
     <nav>
       <a href="index.html">Home</a>
       <a href="story.html">Our Story</a>
@@ -114,61 +398,142 @@
       <a href="get-involved.html">Get Involved</a>
       <a href="gallery.html">Gallery</a>
       <a href="contact.html">Contact</a>
+      <a href="get-involved.html" class="donate-btn">Donate</a>
     </nav>
   </header>
 
   <main>
-    <div class="hero">
+
+    <section class="hero">
       <div class="hero-content">
         <div class="eyebrow">Honouring Annie Mah</div>
-        <h1>A Christmas Legacy of Love and Giving</h1>
-        <p>Continuing a tradition of kindness, compassion and community — one act of giving at a time.</p>
-        <a class="button" href="initiatives.html">Discover Our Initiatives</a>
-      </div>
-    </div>
 
-    <section>
-      <div class="intro">
-        <h2>Giving, in Her Memory</h2>
-        <p>Annie's Angels was created in loving memory of Annie Mah and the kindness she shared with her community. Inspired by her tradition of opening her doors to those in need at Christmas, we hope to continue her legacy by bringing people together through food, gifts and meaningful acts of kindness.</p>
+        <h1>A Legacy of Love and Giving.</h1>
+
+        <div class="hero-line"></div>
+
+        <p>
+          Honouring Annie Mah's tradition of kindness,
+          community and service at Christmas and beyond.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="get-involved.html" class="primary-btn">Get Involved →</a>
+          <a href="story.html" class="secondary-btn">Our Story</a>
+        </div>
       </div>
     </section>
 
-    <section class="pillars">
-      <div class="intro">
+    <section class="welcome">
+      <h2>Giving, in Her Memory</h2>
+
+      <p>
+        Annie's Angels was created in loving memory of Annie Mah
+        and the kindness she shared with her community. Inspired
+        by her tradition of welcoming those in need at Christmas,
+        we hope to continue her legacy through food, gifts,
+        compassion and meaningful acts of giving.
+      </p>
+    </section>
+
+    <section class="initiatives">
+
+      <div class="section-heading">
         <h2>How We Give</h2>
-        <p>Three ways to carry kindness forward.</p>
+        <p>Four ways to carry Annie's legacy forward.</p>
       </div>
+
       <div class="cards">
-        <div class="card">
-          <h3>Christmas Community Lunch</h3>
-          <p>A welcoming meal where everyone is invited to share food, connection and the joy of Christmas.</p>
-        </div>
-        <div class="card">
-          <h3>Toy & Gift Drive</h3>
-          <p>Collecting new toys, books and gifts to help make the holidays brighter for children and families.</p>
-        </div>
-        <div class="card">
-          <h3>Children's Hospital Giving</h3>
-          <p>Sharing comfort and joy with children in hospital through thoughtful gifts, books and approved volunteer activities.</p>
-        </div>
+
+        <article class="card">
+          <img
+            src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800"
+            alt="A welcoming community dinner">
+          <div class="card-content">
+            <h3>Christmas Community Lunch</h3>
+            <p>
+              A warm meal where everyone is welcome,
+              regardless of their circumstances.
+            </p>
+            <a href="initiatives.html" class="learn-more">Learn More →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            src="https://images.unsplash.com/photo-1607344645866-009c320b63e0?w=800"
+            alt="Care packages and essentials">
+          <div class="card-content">
+            <h3>Care Bags for All</h3>
+            <p>
+              Everyday essentials, given with love,
+              including hygiene items and warm clothing.
+            </p>
+            <a href="initiatives.html" class="learn-more">Learn More →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            src="https://images.unsplash.com/photo-1549465220-1a8b9238cd48?w=800"
+            alt="Christmas gifts and presents">
+          <div class="card-content">
+            <h3>Toy & Gift Drive</h3>
+            <p>
+              Collecting new toys, books and gifts
+              to bring joy to children and families.
+            </p>
+            <a href="initiatives.html" class="learn-more">Learn More →</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <img
+            src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?w=800"
+            alt="Children's toys and comfort gifts">
+          <div class="card-content">
+            <h3>Children's Hospital Giving</h3>
+            <p>
+              Sharing comfort and joy with children
+              through thoughtful gifts and approved activities.
+            </p>
+            <a href="initiatives.html" class="learn-more">Learn More →</a>
+          </div>
+        </article>
+
       </div>
     </section>
 
-    <section>
-      <div class="story">
-        <h2 class="section-heading">A Legacy That Lives On</h2>
-        <p>To us, giving is about more than gifts. It is about making people feel remembered, welcomed and cared for.</p>
-        <p>Through Annie's Angels, we hope to keep that spirit alive throughout the year, with a special focus on the Christmas season.</p>
-        <a class="button" href="story.html">Read Annie's Story</a>
-      </div>
+    <section class="story-section">
+      <h2>A Legacy That Lives On</h2>
+
+      <p>
+        To us, giving is about more than gifts. It is about
+        making people feel remembered, welcomed and cared for.
+        Through Annie's Angels, we hope to keep that spirit
+        alive throughout the year.
+      </p>
+
+      <a href="story.html" class="primary-btn">Read Annie's Story →</a>
     </section>
+
   </main>
 
   <footer>
-    <div class="logo" style="color:#f7f1e8;">Annie's Angels <span class="heart">♥</span></div>
+    <div class="logo">Annie's Angels <span class="logo-heart">♡</span></div>
+
     <p>A Christmas Legacy of Love and Giving</p>
     <p>Created in loving memory of Annie Mah.</p>
+
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="story.html">Our Story</a>
+      <a href="initiatives.html">Our Initiatives</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="contact.html">Contact</a>
+    </div>
   </footer>
+
 </body>
 </html>
+
