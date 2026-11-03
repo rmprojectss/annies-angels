@@ -9,33 +9,98 @@
 
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
-    body { font-family:'DM Sans',sans-serif; background:#faf5ed; color:#40352f; line-height:1.7; }
+
+    body {
+      font-family:'DM Sans',sans-serif;
+      background:#faf5ed;
+      color:#40352f;
+      line-height:1.7;
+    }
+
     a { text-decoration:none; color:inherit; }
 
-    header { min-height:85px; padding:12px 5%; display:flex; justify-content:space-between; align-items:center; gap:20px; background:#fffaf4; border-bottom:1px solid #eadfd1; flex-wrap:wrap; }
+    header {
+      min-height:85px;
+      padding:12px 5%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      background:#fffaf4;
+      border-bottom:1px solid #eadfd1;
+      flex-wrap:wrap;
+    }
+
     .brand { min-width:205px; }
-    .logo { font-family:'Allura',cursive; font-size:39px; color:#792b36; line-height:1; }
-    .heart { color:#8060a5; font-family:Georgia,serif; font-size:28px; }
-    .tagline { font-size:8px; letter-spacing:1.5px; text-transform:uppercase; color:#541d28; margin-top:5px; }
-    nav { display:flex; align-items:center; gap:20px; flex-wrap:wrap; font-size:12px; }
+
+    .header-logo {
+      width:250px;
+      max-width:100%;
+      height:auto;
+      display:block;
+    }
+
+    nav {
+      display:flex;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
+      font-size:12px;
+    }
+
     nav a:hover { color:#792b36; }
-    .donate { background:#792b36; color:white; padding:10px 22px; border-radius:30px; }
+
+    .donate {
+      background:#792b36;
+      color:white;
+      padding:10px 22px;
+      border-radius:30px;
+    }
 
     .hero {
-      background:linear-gradient(rgba(40,30,25,.55),rgba(40,30,25,.55)),
-      url('https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=1600') center/cover;
+      background:
+        linear-gradient(rgba(40,30,25,.55),rgba(40,30,25,.55)),
+        url('images/hero-lantern.jpg') center/cover;
       padding:85px 20px;
       text-align:center;
       color:white;
     }
-    .hero h1 { font-family:'Playfair Display',serif; font-size:48px; font-weight:500; }
-    .hero p { margin-top:10px; font-size:14px; }
 
-    main { max-width:1000px; margin:auto; padding:65px 25px 75px; }
+    .hero h1 {
+      font-family:'Playfair Display',serif;
+      font-size:48px;
+      font-weight:500;
+    }
 
-    .intro { max-width:700px; text-align:center; margin:0 auto 40px; }
-    .intro h2 { font-family:'Playfair Display',serif; color:#792b36; font-size:32px; font-weight:500; margin-bottom:12px; }
-    .intro p { color:#6b6058; font-size:14px; }
+    .hero p {
+      margin-top:10px;
+      font-size:14px;
+    }
+
+    main {
+      max-width:1000px;
+      margin:auto;
+      padding:65px 25px 75px;
+    }
+
+    .intro {
+      max-width:700px;
+      text-align:center;
+      margin:0 auto 40px;
+    }
+
+    .intro h2 {
+      font-family:'Playfair Display',serif;
+      color:#792b36;
+      font-size:32px;
+      font-weight:500;
+      margin-bottom:12px;
+    }
+
+    .intro p {
+      color:#6b6058;
+      font-size:14px;
+    }
 
     .contact-grid {
       display:grid;
@@ -51,7 +116,12 @@
       text-align:center;
     }
 
-    .symbol { font-size:35px; color:#8060a5; margin-bottom:12px; }
+    .symbol {
+      font-size:35px;
+      color:#8060a5;
+      margin-bottom:12px;
+    }
+
     .contact-card h2 {
       font-family:'Playfair Display',serif;
       color:#792b36;
@@ -60,12 +130,20 @@
       margin-bottom:10px;
     }
 
-    .contact-card p { color:#625c54; font-size:13px; margin-bottom:15px; }
+    .contact-card p {
+      color:#625c54;
+      font-size:13px;
+      margin-bottom:15px;
+    }
 
     .contact-card a {
       color:#792b36;
       font-weight:600;
       font-size:13px;
+    }
+
+    .contact-card a:hover {
+      text-decoration:underline;
     }
 
     .message {
@@ -84,17 +162,42 @@
       margin-bottom:12px;
     }
 
-    .message p { color:#625c54; font-size:14px; }
+    .message p {
+      color:#625c54;
+      font-size:14px;
+    }
 
-    footer { background:#3b302c; color:#fff8ee; padding:35px; text-align:center; }
-    footer .logo { color:#fff8ee; }
-    footer p { color:#d9cbb9; font-size:12px; margin-top:8px; }
+    .purple-heart { color:#8060a5; }
+
+    footer {
+      background:#3b302c;
+      color:#fff8ee;
+      padding:35px;
+      text-align:center;
+    }
+
+    footer .logo {
+      font-family:'Allura',cursive;
+      font-size:34px;
+      color:#fff8ee;
+    }
+
+    footer .heart {
+      color:#a58ac5;
+    }
+
+    footer p {
+      color:#d9cbb9;
+      font-size:12px;
+      margin-top:8px;
+    }
 
     @media(max-width:750px) {
       header { justify-content:center; }
       nav { justify-content:center; gap:13px; }
       .contact-grid { grid-template-columns:1fr; }
       .hero h1 { font-size:38px; }
+      .header-logo { width:220px; }
     }
   </style>
 </head>
@@ -103,8 +206,7 @@
 
 <header>
   <a href="index.html" class="brand">
-    <div class="logo">Annie's Angels <span class="heart">♡</span></div>
-    <div class="tagline">A Christmas Legacy of Love and Giving</div>
+    <img class="header-logo" src="images/annies-angels-logo.png" alt="Annie's Angels">
   </a>
 
   <nav>
@@ -180,7 +282,7 @@
   </div>
 
   <div class="message">
-    <h2>Thank You for Being Here</h2>
+    <h2>Thank You for Being Here <span class="purple-heart">♡</span></h2>
     <p>
       Every person who shares their time, generosity
       and kindness helps keep Annie's legacy alive.
