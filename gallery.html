@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | Annie's Angels</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: Georgia, serif; background: #faf7f0; color: #34332e; line-height: 1.7; }
+    header { padding: 22px 7%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-bottom: 1px solid #e8dfd2; }
+    .logo { font-size: 25px; color: #702d3c; font-weight: bold; }
+    .heart { color: #8060a5; }
+    nav { display: flex; gap: 20px; flex-wrap: wrap; }
+    nav a { color: #49443e; text-decoration: none; font-size: 14px; }
+    .hero { background: #702d3c; color: white; text-align: center; padding: 85px 20px; }
+    .hero h1 { font-size: 46px; margin-bottom: 12px; }
+    .hero p { letter-spacing: 2px; font-size: 13px; }
+    main { max-width: 1100px; margin: auto; padding: 65px 25px; }
+    .intro { text-align: center; max-width: 700px; margin: 0 auto 45px; }
+    .intro h2 { color: #702d3c; font-size: 30px; margin-bottom: 15px; }
+    .intro p { color: #625c54; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; }
+    .photo { background: #f0ebe2; min-height: 230px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 25px; border: 1px solid #e6ded1; }
+    .photo span { color: #702d3c; font-size: 17px; }
+    .caption { text-align: center; color: #625c54; padding: 12px; font-size: 14px; }
+    .note { text-align: center; margin-top: 50px; color: #8060a5; font-style: italic; }
+    footer { background: #342e2a; color: #f7f1e8; text-align: center; padding: 35px; }
+    footer p { color: #d5c9ba; font-size: 13px; margin-top: 8px; }
+    @media(max-width:600px) { header { justify-content: center; } nav { justify-content: center; gap: 12px; } .hero h1 { font-size: 36px; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Annie's Angels <span class="heart">♥</span></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="story.html">Our Story</a>
+      <a href="initiatives.html">Our Initiatives</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h1>Our Gallery</h1>
+    <p>MOMENTS OF KINDNESS AND CONNECTION</p>
+  </div>
+
+  <main>
+    <div class="intro">
+      <h2>Our Journey of Giving</h2>
+      <p>Every meal shared, gift wrapped and helping hand tells a story. This is where we will share the memories and moments that bring Annie's Angels to life.</p>
+    </div>
+
+    <div class="gallery">
+      <div>
+        <div class="photo"><span>Christmas Community Lunch</span></div>
+        <div class="caption">A place at the table</div>
+      </div>
+      <div>
+        <div class="photo"><span>Care Bags & Essentials</span></div>
+        <div class="caption">Small things that make a difference</div>
+      </div>
+      <div>
+        <div class="photo"><span>Toy & Gift Drive</span></div>
+        <div class="caption">Sharing the joy of giving</div>
+      </div>
+      <div>
+        <div class="photo"><span>Hospital Comfort Gifts</span></div>
+        <div class="caption">A little comfort and happiness</div>
+      </div>
+      <div>
+        <div class="photo"><span>Our Volunteers</span></div>
+        <div class="caption">Kindness brought together</div>
+      </div>
+      <div>
+        <div class="photo"><span>Community Moments</span></div>
+        <div class="caption">A legacy that lives on</div>
+      </div>
+    </div>
+
+    <div class="note">
+      Our gallery will grow with every act of kindness.
+    </div>
+  </main>
+
+  <footer>
+    <div class="logo" style="color:#f7f1e8;">Annie's Angels <span class="heart">♥</span></div>
+    <p>A Christmas Legacy of Love and Giving</p>
+  </footer>
+</body>
+</html>
