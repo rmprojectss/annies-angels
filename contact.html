@@ -5,73 +5,195 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact | Annie's Angels</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=Allura&display=swap" rel="stylesheet">
+
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: Georgia, serif; background: #faf7f0; color: #34332e; line-height: 1.7; }
-    header { padding: 22px 7%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-bottom: 1px solid #e8dfd2; }
-    .logo { font-size: 25px; color: #702d3c; font-weight: bold; }
-    .heart { color: #8060a5; }
-    nav { display: flex; gap: 20px; flex-wrap: wrap; }
-    nav a { color: #49443e; text-decoration: none; font-size: 14px; }
-    .hero { background: #702d3c; color: white; text-align: center; padding: 85px 20px; }
-    .hero h1 { font-size: 46px; margin-bottom: 12px; }
-    .hero p { letter-spacing: 2px; font-size: 13px; }
-    main { max-width: 850px; margin: auto; padding: 70px 25px; }
-    .intro { text-align: center; margin-bottom: 40px; }
-    .intro h2 { color: #702d3c; font-size: 30px; margin-bottom: 15px; }
-    .intro p { color: #625c54; }
-    .contact-box { background: #f0ebe2; padding: 35px; text-align: center; border: 1px solid #e6ded1; }
-    .contact-box h2 { color: #702d3c; margin-bottom: 15px; }
-    .contact-box p { color: #625c54; margin-bottom: 15px; }
-    .contact-box a { color: #702d3c; font-weight: bold; }
-    .social { margin-top: 30px; }
-    footer { background: #342e2a; color: #f7f1e8; text-align: center; padding: 35px; }
-    footer p { color: #d5c9ba; font-size: 13px; margin-top: 8px; }
-    @media(max-width:600px) { header { justify-content: center; } nav { justify-content: center; gap: 12px; } .hero h1 { font-size: 36px; } }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'DM Sans',sans-serif; background:#faf5ed; color:#40352f; line-height:1.7; }
+    a { text-decoration:none; color:inherit; }
+
+    header { min-height:85px; padding:12px 5%; display:flex; justify-content:space-between; align-items:center; gap:20px; background:#fffaf4; border-bottom:1px solid #eadfd1; flex-wrap:wrap; }
+    .brand { min-width:205px; }
+    .logo { font-family:'Allura',cursive; font-size:39px; color:#792b36; line-height:1; }
+    .heart { color:#8060a5; font-family:Georgia,serif; font-size:28px; }
+    .tagline { font-size:8px; letter-spacing:1.5px; text-transform:uppercase; color:#541d28; margin-top:5px; }
+    nav { display:flex; align-items:center; gap:20px; flex-wrap:wrap; font-size:12px; }
+    nav a:hover { color:#792b36; }
+    .donate { background:#792b36; color:white; padding:10px 22px; border-radius:30px; }
+
+    .hero {
+      background:linear-gradient(rgba(40,30,25,.55),rgba(40,30,25,.55)),
+      url('https://images.unsplash.com/photo-1512389142860-9c449e58a543?w=1600') center/cover;
+      padding:85px 20px;
+      text-align:center;
+      color:white;
+    }
+    .hero h1 { font-family:'Playfair Display',serif; font-size:48px; font-weight:500; }
+    .hero p { margin-top:10px; font-size:14px; }
+
+    main { max-width:1000px; margin:auto; padding:65px 25px 75px; }
+
+    .intro { max-width:700px; text-align:center; margin:0 auto 40px; }
+    .intro h2 { font-family:'Playfair Display',serif; color:#792b36; font-size:32px; font-weight:500; margin-bottom:12px; }
+    .intro p { color:#6b6058; font-size:14px; }
+
+    .contact-grid {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+    }
+
+    .contact-card {
+      background:#fffaf4;
+      border:1px solid #eadfd1;
+      border-radius:12px;
+      padding:30px;
+      text-align:center;
+    }
+
+    .symbol { font-size:35px; color:#8060a5; margin-bottom:12px; }
+    .contact-card h2 {
+      font-family:'Playfair Display',serif;
+      color:#792b36;
+      font-size:24px;
+      font-weight:500;
+      margin-bottom:10px;
+    }
+
+    .contact-card p { color:#625c54; font-size:13px; margin-bottom:15px; }
+
+    .contact-card a {
+      color:#792b36;
+      font-weight:600;
+      font-size:13px;
+    }
+
+    .message {
+      background:#f0e8dc;
+      padding:35px;
+      border-radius:12px;
+      text-align:center;
+      margin-top:25px;
+    }
+
+    .message h2 {
+      font-family:'Playfair Display',serif;
+      color:#792b36;
+      font-size:28px;
+      font-weight:500;
+      margin-bottom:12px;
+    }
+
+    .message p { color:#625c54; font-size:14px; }
+
+    footer { background:#3b302c; color:#fff8ee; padding:35px; text-align:center; }
+    footer .logo { color:#fff8ee; }
+    footer p { color:#d9cbb9; font-size:12px; margin-top:8px; }
+
+    @media(max-width:750px) {
+      header { justify-content:center; }
+      nav { justify-content:center; gap:13px; }
+      .contact-grid { grid-template-columns:1fr; }
+      .hero h1 { font-size:38px; }
+    }
   </style>
 </head>
-<body>
-  <header>
-    <div class="logo">Annie's Angels <span class="heart">♥</span></div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="story.html">Our Story</a>
-      <a href="initiatives.html">Our Initiatives</a>
-      <a href="get-involved.html">Get Involved</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
 
-  <div class="hero">
-    <h1>Get in Touch</h1>
-    <p>LET'S MAKE A DIFFERENCE TOGETHER</p>
+<body>
+
+<header>
+  <a href="index.html" class="brand">
+    <div class="logo">Annie's Angels <span class="heart">♡</span></div>
+    <div class="tagline">A Christmas Legacy of Love and Giving</div>
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="story.html">Our Story</a>
+    <a href="initiatives.html">Our Initiatives</a>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="get-involved.html" class="donate">Donate</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Contact Us</h1>
+  <p>Let's make a difference together.</p>
+</section>
+
+<main>
+
+  <div class="intro">
+    <h2>We'd Love to Hear From You</h2>
+    <p>
+      Whether you're interested in donating, volunteering,
+      partnering with us or learning more about Annie's Angels,
+      we'd love to connect.
+    </p>
   </div>
 
-  <main>
-    <div class="intro">
-      <h2>We'd Love to Hear From You</h2>
-      <p>Whether you're interested in donating, volunteering, partnering with us or learning more about Annie's Angels, we'd love to connect.</p>
+  <div class="contact-grid">
+
+    <div class="contact-card">
+      <div class="symbol">✉</div>
+      <h2>Get in Touch</h2>
+      <p>
+        Have questions about donations, volunteering or
+        our initiatives? Reach out to us by email.
+      </p>
+      <p><em>Our email address will be added soon.</em></p>
     </div>
 
-    <div class="contact-box">
-      <h2>Connect With Annie's Angels</h2>
-      <p>For donation inquiries, volunteer opportunities, partnerships and general questions, please reach out by email.</p>
-      <p><em>Our email address will be added here soon.</em></p>
+    <div class="contact-card">
+      <div class="symbol">♡</div>
+      <h2>Follow Our Journey</h2>
+      <p>
+        Stay connected as we grow, share updates
+        and celebrate the community behind Annie's Angels.
+      </p>
+      <p><em>Our Instagram page is coming soon.</em></p>
+    </div>
+
+    <div class="contact-card">
+      <div class="symbol">✧</div>
+      <h2>Volunteer With Us</h2>
+      <p>
+        Interested in helping at our Christmas lunch,
+        organizing donations or supporting our initiatives?
+      </p>
+      <a href="get-involved.html">Explore Opportunities →</a>
+    </div>
+
+    <div class="contact-card">
+      <div class="symbol">♡</div>
+      <h2>Community Partnerships</h2>
+      <p>
+        We welcome conversations with local businesses,
+        churches and organizations interested in supporting
+        our mission.
+      </p>
       <p>Calgary, Alberta, Canada</p>
-
-      <div class="social">
-        <h2>Follow Our Journey</h2>
-        <p>Stay connected as we grow and share Annie's legacy.</p>
-        <p>Our Instagram page is coming soon.</p>
-      </div>
     </div>
-  </main>
 
-  <footer>
-    <div class="logo" style="color:#f7f1e8;">Annie's Angels <span class="heart">♥</span></div>
-    <p>A Christmas Legacy of Love and Giving</p>
-    <p>Created in loving memory of Annie Mah.</p>
-  </footer>
+  </div>
+
+  <div class="message">
+    <h2>Thank You for Being Here</h2>
+    <p>
+      Every person who shares their time, generosity
+      and kindness helps keep Annie's legacy alive.
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="logo">Annie's Angels <span class="heart">♡</span></div>
+  <p>A Christmas Legacy of Love and Giving</p>
+  <p>Created in loving memory of Annie Mah.</p>
+</footer>
+
 </body>
 </html>
