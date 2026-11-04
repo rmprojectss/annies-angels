@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resources & Awareness | Annie's Angels</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&family=Allura&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family:'DM Sans',sans-serif;
+      background:#faf5ed;
+      color:#40352f;
+      line-height:1.7;
+    }
+
+    a { text-decoration:none; color:inherit; }
+
+    header {
+      min-height:85px;
+      padding:12px 5%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:20px;
+      background:#fffaf4;
+      border-bottom:1px solid #eadfd1;
+      flex-wrap:wrap;
+    }
+
+    .brand { min-width:205px; }
+
+    .header-logo {
+      width:250px;
+      max-width:100%;
+      height:auto;
+      display:block;
+    }
+
+    nav {
+      display:flex;
+      align-items:center;
+      gap:20px;
+      flex-wrap:wrap;
+      font-size:12px;
+    }
+
+    nav a:hover { color:#792b36; }
+
+    .donate {
+      background:#792b36;
+      color:white;
+      padding:10px 22px;
+      border-radius:30px;
+    }
+
+    .hero {
+      background:
+        linear-gradient(rgba(40,30,25,.55),rgba(40,30,25,.55)),
+        url('images/hero-lantern.jpg') center/cover;
+      padding:85px 20px;
+      text-align:center;
+      color:white;
+    }
+
+    .hero h1 {
+      font-family:'Playfair Display',serif;
+      font-size:46px;
+      font-weight:500;
+    }
+
+    .hero p {
+      margin-top:10px;
+      font-size:14px;
+    }
+
+    main {
+      max-width:1050px;
+      margin:auto;
+      padding:65px 25px 75px;
+    }
+
+    .intro {
+      max-width:750px;
+      text-align:center;
+      margin:0 auto 45px;
+    }
+
+    .intro h2 {
+      font-family:'Playfair Display',serif;
+      color:#792b36;
+      font-size:32px;
+      font-weight:500;
+      margin-bottom:12px;
+    }
+
+    .intro p {
+      color:#6b6058;
+      font-size:14px;
+    }
+
+    .resource-card {
+      background:#fffaf4;
+      border:1px solid #eadfd1;
+      border-radius:14px;
+      padding:40px;
+      box-shadow:0 3px 15px rgba(65,40,25,.06);
+    }
+
+    .resource-card h2 {
+      font-family:'Playfair Display',serif;
+      color:#792b36;
+      font-size:29px;
+      font-weight:500;
+      margin-bottom:12px;
+    }
+
+    .resource-card p {
+      color:#625c54;
+      font-size:14px;
+      margin-bottom:18px;
+    }
+
+    .resource-label {
+      color:#8060a5;
+      font-size:11px;
+      font-weight:600;
+      letter-spacing:1.5px;
+      text-transform:uppercase;
+      margin-bottom:10px;
+    }
+
+    .resource-links {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:15px;
+      margin-top:30px;
+    }
+
+    .resource-link {
+      background:#f4eee5;
+      border-radius:10px;
+      padding:22px 18px;
+      transition:transform .2s;
+    }
+
+    .resource-link:hover {
+      transform:translateY(-3px);
+    }
+
+    .resource-link h3 {
+      font-family:'Playfair Display',serif;
+      color:#792b36;
+      font-size:19px;
+      font-weight:500;
+      margin-bottom:8px;
+    }
+
+    .resource-link p {
+      font-size:12px;
+      margin-bottom:12px;
+    }
+
+    .resource-link a {
+      color:#792b36;
+      font-weight:600;
+      font-size:12px;
+    }
+
+    .closing {
+      margin-top:30px;
+      padding:35px;
+      text-align:center;
+      background:#f0e8dc;
+      border-radius:12px;
+    }
+
+    .closing h2 {
+      font-family:'Playfair Display',serif;
+      color:#792b36;
+      font-size:26px;
+      font-weight:500;
+      margin-bottom:10px;
+    }
+
+    .closing p {
+      color:#625c54;
+      font-size:13px;
+    }
+
+    .heart { color:#8060a5; }
+
+    footer {
+      background:#3b302c;
+      color:#fff8ee;
+      padding:35px;
+      text-align:center;
+    }
+
+    footer .logo {
+      font-family:'Allura',cursive;
+      font-size:34px;
+    }
+
+    footer .heart { color:#a58ac5; }
+
+    footer p {
+      color:#d9cbb9;
+      font-size:12px;
+      margin-top:8px;
+    }
+
+    @media(max-width:850px) {
+      header { justify-content:center; }
+      nav { justify-content:center; gap:13px; }
+      .resource-links { grid-template-columns:1fr; }
+    }
+
+    @media(max-width:550px) {
+      .hero h1 { font-size:36px; }
+      main { padding:45px 18px; }
+      .resource-card { padding:25px 20px; }
+      .header-logo { width:220px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="brand">
+    <img class="header-logo" src="images/annies-angels-logo.png" alt="Annie's Angels">
+  </a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="story.html">Our Story</a>
+    <a href="initiatives.html">Our Initiatives</a>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="resources.html">Resources</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="get-involved.html" class="donate">Donate</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Resources & Awareness</h1>
+  <p>Knowledge, support and hope for those affected by pancreatic cancer.</p>
+</section>
+
+<main>
+
+  <div class="intro">
+    <h2>Making a Difference Through Awareness</h2>
+    <p>
+      Annie's Angels was created in loving memory of Annie Mah.
+      Her journey with pancreatic cancer is an important part of
+      our story and inspires us to help raise awareness, share
+      resources and support those affected by the disease.
+    </p>
+  </div>
+
+  <section class="resource-card">
+
+    <div class="resource-label">Featured Organization</div>
+
+    <h2>Craig's Cause Pancreatic Cancer Society</h2>
+
+    <p>
+      Craig's Cause Pancreatic Cancer Society is a Canadian
+      organization dedicated to pancreatic cancer awareness,
+      education, patient support and research.
+    </p>
+
+    <p>
+      We encourage our community to explore their resources,
+      learn more about pancreatic cancer and discover ways
+      to get involved in raising awareness.
+    </p>
+
+    <div class="resource-links">
+
+      <div class="resource-link">
+        <h3>Learn & Find Support</h3>
+        <p>
+          Explore pancreatic cancer information, educational
+          materials and support resources for patients and families.
+        </p>
+        <a href="https://www.craigscause.ca/" target="_blank" rel="noopener noreferrer">
+          Explore Resources →
+        </a>
+      </div>
+
+      <div class="resource-link">
+        <h3>Support the Cause</h3>
+        <p>
+          Discover ways to contribute to pancreatic cancer
+          awareness, support and research.
+        </p>
+        <a href="https://www.craigscause.ca/" target="_blank" rel="noopener noreferrer">
+          Visit Craig's Cause →
+        </a>
+      </div>
+
+      <div class="resource-link">
+        <h3>Walk, Run & Raise Awareness</h3>
+        <p>
+          Learn about the Kicking PancreAS™ 5K events and
+          opportunities to get involved in your community.
+        </p>
+        <a href="https://www.craigscause.ca/" target="_blank" rel="noopener noreferrer">
+          Discover Events →
+        </a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <div class="closing">
+    <h2>Awareness Can Make a Difference <span class="heart">♡</span></h2>
+    <p>
+      By sharing knowledge, supporting families and raising
+      awareness, we can help make a difference in the lives
+      of those affected by pancreatic cancer.
+    </p>
+  </div>
+
+</main>
+
+<footer>
+  <div class="logo">Annie's Angels <span class="heart">♡</span></div>
+  <p>A Christmas Legacy of Love and Giving</p>
+  <p>Created in loving memory of Annie Mah.</p>
+</footer>
+
+</body>
+</html>
